@@ -2,7 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Image from 'next/Image'
+import Image from 'next/image'
 import { useTheme } from '../context/themeContext'
 
 const Navbar = () => {

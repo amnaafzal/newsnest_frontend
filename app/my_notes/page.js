@@ -3,7 +3,7 @@ import React, { use, useState } from 'react'
 import { useEffect } from 'react'
 import Save_notes from '../components/Save_notes'
 import { useTheme } from '../context/themeContext'
-import Image from 'next/Image'
+import Image from 'next/image'
 
 const Page = () => {
 
