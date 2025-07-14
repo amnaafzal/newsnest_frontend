@@ -81,8 +81,8 @@ const Navbar = () => {
         {hamberger && (<>
           <ul className="flex flex-col gap-4" id="navbar_items">
             <li><Link href='/' className='text-xl hover:text-blue-400'>Home</Link></li>
-            <li><Link href='/' className='text-xl hover:text-blue-400'>About</Link></li>
-            <li><Link href='/' className='text-xl hover:text-blue-400'>Contact</Link></li>
+            <li><Link href='/my_notes' className='text-xl hover:text-blue-400'>My Notes</Link></li>
+            <li><Link href='/about' className='text-xl hover:text-blue-400'>About</Link></li>
           </ul>
 
           <div className="flex" id="toggle_mode">
