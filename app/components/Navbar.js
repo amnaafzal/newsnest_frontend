@@ -64,7 +64,7 @@ const Navbar = () => {
 
         <div className="sm:flex justify-center items-center hidden" id='toggle_mode'>
           <Image id='toggleModeIcon' src="/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
-          {/* <Image src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="light" className='border rounded-br-md rounded-tr-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} /> */}
+         
         </div>
 
 
@@ -86,8 +86,8 @@ const Navbar = () => {
           </ul>
 
           <div className="flex" id="toggle_mode">
-            <Image id='toggleModeIcon' src="dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-bl-md rounded-tl-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} />
-            {/* <Image src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="light" className='border rounded-br-md rounded-tr-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} /> */}
+            <Image id='toggleModeIcon' src="/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-bl-md rounded-tl-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
+           
           </div>
         </>)}
       </div>
