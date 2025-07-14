@@ -47,7 +47,7 @@ const About = () => {
             <li>Select a news channel on the homepage</li>
             <li>Browse the latest headlines</li>
             <li>Click the 📝 icon to save a note with your thoughts</li>
-            <li>Manage your notes in the "My Notes" section</li>
+            <li>{`Manage your notes in the "My Notes" section`}</li>
             <li>Use the moon/sun icon in the navbar to switch theme</li>
           </ol>
         </section>
