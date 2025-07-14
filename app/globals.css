@@ -1,0 +1,18 @@
+@import "tailwindcss";
+
+
+/* For Chrome, Edge, Safari */
+.hide-scrollbar {
+  overflow-y: scroll;        
+  -ms-overflow-style: none;    
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+  display: none;               
+}
+
+
+
+
+
+
