@@ -11,24 +11,45 @@ const Navbar = () => {
   const [hamberger, setHamberger] = useState(false)
 
 
-  useEffect(() => {
+  //  useEffect(() => {
+  //   const navbar = document.querySelector('.navbar');
+  //   const toggleIconMobile = document.getElementById('toggleModeIconMobile');
+  //   const toggleModeIconDesktop = document.getElementById('toggleModeIconDesktop');
 
-    if (isDarkMode) {
+  //   if (!navbar) return;
 
-      document.querySelector('.navbar').classList.remove('bg-gray-300', 'border-gray-300')
-      document.querySelector('.navbar').classList.add('bg-gray-900', 'border-gray-900')
-      document.getElementById('toggleModeIcon').src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png"
-      
-      
-    }
-    else {
-      document.querySelector('.navbar').classList.remove('bg-gray-900', 'border-gray-900')
-      document.getElementById('toggleModeIcon').src="dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" 
-      document.querySelector('.navbar').classList.add('bg-gray-300', 'border-gray-300')
-    
+  //   if (isDarkMode) {
+  //     navbar.classList.remove('bg-gray-300', 'border-gray-300');
+  //     navbar.classList.add('bg-gray-900', 'border-gray-900');
 
-    }
-  })
+  //     if (toggleIconMobile) {
+  //       toggleIconMobile.src = "/clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png";
+  //     }
+
+  //     if (toggleModeIconDesktop) {
+  //       toggleModeIconDesktop.src = "/clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png";
+  //     }
+  //   } else {
+  //     navbar.classList.remove('bg-gray-900', 'border-gray-900');
+  //     navbar.classList.add('bg-gray-300', 'border-gray-300');
+
+  //     if (toggleIconMobile) {
+  //       toggleIconMobile.src = "/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png";
+  //     }
+
+  //     if (toggleModeIconDesktop) {
+  //       toggleModeIconDesktop.src = "/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png";
+  //     }
+  //   }
+  // }, [isDarkMode]);
+
+  const iconSrc = isDarkMode
+    ? '/clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png'
+    : '/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png'
+
+  const navbarClasses = isDarkMode
+    ? 'navbar flex justify-between bg-gray-900 transition-colors duration-500 text-white px-10 items-center border border-gray-900 border-b-gray-600'
+    : 'navbar flex justify-between bg-gray-300 transition-colors duration-500 text-white px-10 items-center border border-gray-300 border-b-gray-600'
 
   const showMenu = () => {
 
@@ -50,7 +71,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <nav className='navbar flex justify-between  bg-gray-300 transition-colors duration-500 text-white px-10 items-center border border-gray-300 border-b-gray-600'>
+      <nav className={navbarClasses}>
         <div className="logo flex items-center gap-2">
           <Image src="/logo2.png" alt="NewsNest" width={90} height={30} />
 
@@ -63,8 +84,8 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:flex justify-center items-center hidden" id='toggle_mode'>
-          <Image id='toggleModeIcon' src="/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
-         
+          <Image id='toggleModeIconDesktop' src={iconSrc} alt="dark" className='border rounded-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
+
         </div>
 
 
@@ -86,8 +107,8 @@ const Navbar = () => {
           </ul>
 
           <div className="flex" id="toggle_mode">
-            <Image id='toggleModeIcon' src="/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-bl-md rounded-tl-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
-           
+            <Image id='toggleModeIconMobile' src={iconSrc} alt="dark" className='border rounded-bl-md rounded-tl-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
+
           </div>
         </>)}
       </div>
