@@ -2,6 +2,7 @@
 
 import React, { useEffect, useState } from 'react'
 import Link from 'next/link'
+import Image from 'next/Image'
 import { useTheme } from '../context/themeContext'
 
 const Navbar = () => {
@@ -51,7 +52,7 @@ const Navbar = () => {
     <div>
       <nav className='navbar flex justify-between  bg-gray-300 transition-colors duration-500 text-white px-10 items-center border border-gray-300 border-b-gray-600'>
         <div className="logo flex items-center gap-2">
-          <img src="logo2.png" alt="NewsNest" width={90} />
+          <Image src="/logo2.png" alt="NewsNest" width={90} height={30} />
 
         </div>
 
@@ -62,8 +63,8 @@ const Navbar = () => {
         </ul>
 
         <div className="sm:flex justify-center items-center hidden" id='toggle_mode'>
-          <img id='toggleModeIcon' src="dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} />
-          {/* <img src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="light" className='border rounded-br-md rounded-tr-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} /> */}
+          <Image id='toggleModeIcon' src="/dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-md p-2 border-white cursor-pointer' width={40} height={40} onClick={() => toggleMode()} />
+          {/* <Image src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="light" className='border rounded-br-md rounded-tr-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} /> */}
         </div>
 
 
@@ -71,7 +72,7 @@ const Navbar = () => {
 
 
         <div className="hamberger  block sm:hidden">
-          <img src="menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="hamberger_icon" onClick={showMenu} className='curser-pointer' />
+          <Image src="/menu_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="hamberger_icon" width={30} height={30} onClick={showMenu} className='curser-pointer' />
         </div>
 
       </nav>
@@ -85,8 +86,8 @@ const Navbar = () => {
           </ul>
 
           <div className="flex" id="toggle_mode">
-            <img id='toggleModeIcon' src="dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-bl-md rounded-tl-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} />
-            {/* <img src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="light" className='border rounded-br-md rounded-tr-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} /> */}
+            <Image id='toggleModeIcon' src="dark_mode_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="dark" className='border rounded-bl-md rounded-tl-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} />
+            {/* <Image src="clear_day_24dp_FFFFFF_FILL0_wght400_GRAD0_opsz24.png" alt="light" className='border rounded-br-md rounded-tr-md p-2 border-white cursor-pointer' onClick={() => toggleMode()} /> */}
           </div>
         </>)}
       </div>

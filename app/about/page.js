@@ -37,7 +37,7 @@ const About = () => {
         <section className="mb-10">
           <h2 className="text-2xl font-semibold mb-2">👩‍💻 About the Developer</h2>
           <p>
-            Hi, I'm <span className="font-bold">Amna Afzal</span>, a Computer Science student passionate about web development. NewsNest is a reflection of my journey into building useful, real-world applications using modern web technologies.
+            {`Hi, I'm `}<span className="font-bold">Amna Afzal</span>, a Computer Science student passionate about web development. NewsNest is a reflection of my journey into building useful, real-world applications using modern web technologies.
           </p>
         </section>
 

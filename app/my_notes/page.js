@@ -3,8 +3,9 @@ import React, { use, useState } from 'react'
 import { useEffect } from 'react'
 import Save_notes from '../components/Save_notes'
 import { useTheme } from '../context/themeContext'
+import Image from 'next/Image'
 
-const page = () => {
+const Page = () => {
 
     const { isDarkMode } = useTheme();
     const [savednote, setSavedNotes] = useState([])
@@ -84,8 +85,8 @@ const page = () => {
 
                                     </div>
                                     <div className="modification flex flex-1/5 justify-center items-center">
-                                        <img src="edit.png" alt="edit_image" className='w-7 h-7 cursor-pointer' onClick={()=>editNotes(index)} />
-                                        <img src="delete.png" alt="delete_image" className='w-7 h-7 cursor-pointer' onClick={()=>deleteNote(index)}/>
+                                        <Image src="/edit.png" alt="edit_Image" className='w-7 h-7 cursor-pointer' width={30} height={30} onClick={()=>editNotes(index)} />
+                                        <Image src="/delete.png" alt="delete_Image" className='w-7 h-7 cursor-pointer' width={30} height={30} onClick={()=>deleteNote(index)}/>
                                     </div>
                                 </li>
                             )
@@ -105,4 +106,4 @@ const page = () => {
     )
 }
 
-export default page
+export default Page
