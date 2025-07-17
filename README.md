@@ -65,3 +65,8 @@ MONGO_URI=mongodb://localhost:27017/newsnest
 
 # Start the server
 node server.js
+
+```
+## 🚀 Live Demo
+
+🔗 Deployed on Vercel: [newsnest.vercel.app](https://newsnest-frontend-latest.vercel.app/)
